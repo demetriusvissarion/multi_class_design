@@ -1,4 +1,5 @@
 import math
+import re
 # from diary_entry import *
 
 class Diary:
@@ -78,6 +79,14 @@ class Diary:
             if value == biggest_value:
                 result += key
         return result
+    
+    # search all entries for phone numbers and make a list of phone numbers"
+    def list_of_mobile_phone_numbers(self):
+        phone_numbers = []
+        uk_phone_regex = r'\b(?:\+44\s?|0)(?:(?:1\d{3}|7[1-9][0-9]|20\s?[7-9]|2[1-9]\d|30\d|3[1-9]|[4-6]\d|8[0-4]|8[7-9]|90\d)\s?[0-9 \-.()]{6,}\d)\b'
+        for obj in self.list_of_entries:
+            phone_numbers += re.findall(uk_phone_regex, obj.contents)
+        return phone_numbers
 
 
 # # find the number that is closest to, but not over

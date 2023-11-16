@@ -25,19 +25,6 @@ As a user
 So that I can keep track of my contacts
 I want to see a list of all of the mobile phone numbers in all my diary entries => search all entries for phone numbers and make a list of phone numbers"
 
-Nouns:
-user => class (arg: user) => has diary and todos lists of objects
-self.todos_list = list of todo objects
-self.diary_entries = list of diary entry objects
-self.contacts_phone_number_list = search all diary entries for phone numbers
-diary => class (arg: entry)
-tasks => class (arg: task)
-
-Verbs:
-record experiences => add entries to diary_entries
-read diary entries => show all entries from diary_entries
-find_best_entry_for_reading_time
-
 
 ## 2. Design the Class System
 
@@ -46,7 +33,7 @@ focus on the details you see as important, not everything. The diagram below
 uses asciiflow.com but you could also use excalidraw.com, draw.io, or miro.com_
 
 ```
-see attached multi_class_recipe.drawio file
+....
 ```
 
 _Also design the interface of each class in more detail._
