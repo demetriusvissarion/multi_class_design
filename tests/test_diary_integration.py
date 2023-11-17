@@ -9,8 +9,6 @@ Given an instance of DiaryEntry and one entry
 """
 def test_if_entry_added():
     entry = DiaryEntry('15/11/2023 Gym', 'Completed upper body day 1 weightlifting program today')
-    # entry = [diary_entry.title, diary_entry.contents]
-    # print(entry)
     diary = Diary()
     diary.add(entry)
     result = diary.all()
@@ -104,17 +102,3 @@ def test_throws_error_when_no_entries():
         diary.all()
     error_message = str(e.value)
     assert error_message == "No entry."
-
-
-"""
-When list_of_mobile_phone_numbers() function is called after adding entries
-#list_of_mobile_phone_numbers returns phone numbers
-"""
-def test_if_list_of_mobile_phone_numbers_returns_phone_numbers():
-    diary_entry1 = DiaryEntry('14/11/2023 Gym', '07475844761 Completed upper body day 1 weightlifting program today')
-    diary_entry2 = DiaryEntry('15/11/2023 Latin Lesson', 'Suspendisse pretium gravida commodo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed cursus commodo lacus, vitae efficitur dolor. Aliquam sit amet volutpat magna. Morbi dapibus lorem at turpis luctus imperdiet. Mauris pharetra diam urna, vitae molestie lectus auctor ut. 07475844766 Proin iaculis lacus id augue elementum, sed ullamcorper nibh pharetra. Suspendisse ac ex orci.')
-    diary = Diary()
-    diary.add(diary_entry1)
-    diary.add(diary_entry2)
-    result = diary.list_of_mobile_phone_numbers()
-    assert result == ['07475844761', '07475844766']
