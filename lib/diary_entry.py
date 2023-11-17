@@ -5,7 +5,7 @@ class DiaryEntry:
     #   title: a string
     #   contents: a string
 
-    def __init__(self, title, contents): # title, contents are strings
+    def __init__(self, title=None, contents=None): # title, contents are strings
         # Side-effects:
         #   Sets the title and contents properties
         if title == None or len(title) <= 0 or contents == None or len(contents) <= 0:

@@ -46,7 +46,7 @@ def test_if_throws_error_when_no_arguments():
 When class is instantiated with one empty string as argument
 #DiaryEntry throws an error
 """
-def test_if_throws_error_when_no_arguments():
+def test_if_throws_error_when_empty_arguments():
     with pytest.raises(Exception) as e: 
         DiaryEntry('15/11/2023 Gym', '')
     error_message = str(e.value)
